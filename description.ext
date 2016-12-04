@@ -1,0 +1,6 @@
+// ---- Respawn ----
+	respawn = BASE;
+	respawnDelay = 5;
+	respawnTemplates[] = {"spectator","MenuPosition"};
+	// Set to 1 if you want players to use the respaw menu when the mission starts
+	respawnOnStart = 0;
