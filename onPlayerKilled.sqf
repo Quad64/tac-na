@@ -8,9 +8,13 @@
 if (isServer) then {
 	if (respawns <= 0) then {
 		// Disable respawns for west faction
-		[west, 0] call BIS_fnc_removeRespawnPosition;
-		// Force player into Task Force Radio spectator
-		[player, true] call TFAR_fnc_forceSpectator;
+		["disable",uiNamespace getVariable "BIS_RscRespawnControlsMap_ctrlRoleList",2,"Your side has run out of respawns!"] call BIS_fnc_showRespawnMenuDisableItem;
+		// Wait 10 seconds in case there is someone still respawning
+		sleep 10;
+		// If everyone is dead end the mission with a "MISSION FAILED"
+		if ({alive _x} count playableUnits == 0) then {
+			"EveryoneLost" call BIS_fnc_endMissionServer;
+		}
 	} else {
 		// Deduct 1 point from respawns (declared in the 'init.sqf')
 		respawns = respawns - 1;
