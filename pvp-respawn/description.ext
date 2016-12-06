@@ -1,0 +1,30 @@
+// ---- Respawn ----
+	respawn = BASE;
+	respawnDelay = 5;
+	respawnTemplates[] = {"spectator","MenuPosition"};
+	// Set to 1 if you want players to use the respaw menu when the mission starts
+	respawnOnStart = 0;
+
+// ---- Mission Paramaters ----
+params
+{
+	class PlayerRespawns
+	{
+		title = "Respawns";
+		values[] = {0, 5, 10, 15, 20};
+		default = 5;
+	};
+};
+
+// --- End Mission ----
+class CfgDebriefing
+{
+	class BlueWin
+	{
+		title = "BLUEFOR Win";
+	};
+	class RedWin
+	{
+		title = "OPFOR Win";
+	};
+};
