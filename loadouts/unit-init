@@ -1,0 +1,4 @@
+/* copy and paste the following line in your unit's init field. Replace FILE with the name of the file that contains the
+loadout you want to apply to the unit (make sure to keep the quotes and the .sqf) */
+
+null = [this] execVM "FILE.sqf"; this addeventhandler ["respawn","_this execVM 'FILE.sqf'"];
