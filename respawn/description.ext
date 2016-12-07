@@ -4,3 +4,27 @@
 	respawnTemplates[] = {"spectator","MenuPosition"};
 	// Set to 1 if you want players to use the respaw menu when the mission starts
 	respawnOnStart = 0;
+	
+// ---- Mission Parameters ----
+class Params
+{
+	class PlayerRespawns
+	{
+		title = "Respawns";
+		values[] = {0, 5, 10, 15, 20};
+		default = 5;
+	}
+}
+
+// ---- End Mission ----
+// https://community.bistudio.com/wiki/Debriefing
+class CfgDebriefing
+{
+	class EveryoneLost
+	{
+		title = "MISSION FAILED";
+		subtitle = "All BLUEFOR forces have been wiped out";
+		description = "";
+		pictureBackground = "";
+	}
+}
