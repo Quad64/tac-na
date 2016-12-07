@@ -13,10 +13,16 @@ if (isServer) then {
 		sleep 10;
 		// If everyone is dead end the mission with a "MISSION FAILED"
 		if ({alive _x} count playableUnits == 0) then {
-			"EveryoneLost" call BIS_fnc_endMissionServer;
+			["EveryoneLost", false] call BIS_fnc_endMission;
 		}
 	} else {
 		// Deduct 1 point from respawns (declared in the 'init.sqf')
 		respawns = respawns - 1;
+		if (respawns <= 0) then {
+			Hint "No more respawns";
+		} else {
+			sleep 10;
+			Hint format ["Respawns left: %1",respawns ];
+		};
 	};
 };
