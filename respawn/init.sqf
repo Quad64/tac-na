@@ -1,5 +1,5 @@
 /*
-* Respawn script by Quad
+* Respawn script by Quad and MrTimn
 *
 * Set the number of respawns you want the players to have
 * Give each playable character a MPEventHandler to execute the 'killed.sqf' when they die
