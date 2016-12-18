@@ -1,9 +1,9 @@
 /*
-* Respawn script by Quad and MrTimn
+* Respawn JIP script by Quad and MrTimn
 *
+* Checks if "respawns" has been defined and exits if it has not
 * notifies the player how many respawns are left
-* deducts 1 respawn ticket from the variable 'respawns' (declared in the 'init.sqf')
-* if there were 0 tickets left when the player was killed, respawn is disabled
+* if there were 0 tickets left respawn is disabled
 */
 
 if (isNil "respawns") exitWith {};
