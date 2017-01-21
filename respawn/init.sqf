@@ -8,7 +8,7 @@
 if (isServer) then {
 	// Set for the number of respawns you want the players to have
 	respawns = paramsArray select 0;
-	
-	{_x addMPEventHandler ["mpKilled", {Null = _this execVM "killed.sqf";}];
-	} forEach playableUnits;
 };
+
+{_x addEventHandler ["killed", "_this execVM 'killed.sqf'"];
+	} forEach playableUnits;
